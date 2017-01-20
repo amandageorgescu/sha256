@@ -2,9 +2,8 @@
 
 import flask
 import flask_sqlalchemy
-import flask_restless
 import hashlib
-from flask import request, Response, json
+from flask import request, json
 from flask import render_template
 from flask import abort
 
