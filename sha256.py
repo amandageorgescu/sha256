@@ -3,6 +3,7 @@
 import flask
 import flask_sqlalchemy
 import hashlib
+import os
 from flask import request, json
 from flask import render_template
 from flask import abort
@@ -41,5 +42,6 @@ def get_message(sha256):
 
 if __name__ == '__main__':
 	db.create_all()
-	app.run()
+	port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
 
